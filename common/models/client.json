@@ -1,0 +1,59 @@
+{
+  "name": "client",
+  "plural": "clients",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true,
+      "id": true
+    },
+    "gPlusId": {
+      "type": "string",
+      "required": true
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "position": {
+      "type": "geopoint"
+    },
+    "room": {
+      "type": "string"
+    },
+    "gcmRegId": {
+      "type": "string"
+    },
+    "trackers": {
+      "type": ["string"],
+      "default": []
+    },
+    "tracking": {
+      "type": ["string"],
+      "default": []
+    },
+    "wantToTrack": {
+      "type": ["string"],
+      "default": []
+    },
+    "isSnoozed": {
+      "type": "boolean"
+    },
+    "blocked": {
+      "type": ["string"],
+      "default": []
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
